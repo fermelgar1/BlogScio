@@ -2,6 +2,7 @@ import Link from 'next/link'
 import AppContext from '../AppContext'
 import React from 'react'
 import { useRouter } from 'next/router'
+import NavBar from '../components/NavBar'
 
 const posts = ({}) => {
 	const router = useRouter()
@@ -19,14 +20,18 @@ const posts = ({}) => {
 	const Post = ({ item }) => {
 		const posts = item.attributes
 		return (
-			<button onClick={() => hanldeClick(posts)}>
+			<div>
+				<NavBar />
 				<div>
-					<h1>{posts.title}</h1>
-					<h2>{posts.description}</h2>
-					<h3>{posts.author}</h3>
-					<p>{item.id}</p>
+					<button onClick={() => hanldeClick(posts)}>
+						<div>
+							<h1>{posts.title}</h1>
+							<h2>{posts.description}</h2>
+							<h3>{posts.author}</h3>
+						</div>
+					</button>
 				</div>
-			</button>
+			</div>
 		)
 	}
 
