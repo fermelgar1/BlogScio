@@ -1,6 +1,7 @@
 ############################
 # OS X
 ############################
+package-lock.json
 
 .DS_Store
 .AppleDouble
